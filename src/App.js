@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 
 function Button(props) {
-
+    const handleClick = () => props.onClickFunction(props.counterNumber);
   return (
-      <button onClick={() => props.onClickFunction(props.counterNumber)}>
+      <button onClick={handleClick}>
         +{props.counterNumber}
       </button>
   );
